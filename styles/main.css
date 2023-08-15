@@ -21,16 +21,36 @@
 }
 
 .logoBox {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: absolute;
+    top: -10;
+    left: -10;
+    background-color: #bbb;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logoBox img {
+    margin-top: 13px;
+}
+
+@media(max-width: 700px) {
+    .logoBox {
+        display: none;
+    }
 }
 
 nav {
     display: flex;
     padding: 0.5% 5%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+
+.nav-links {
+    text-align: center;
+    justify-content: center;
 }
 
 .nav-links ul li {
@@ -41,7 +61,7 @@ nav {
 }
 
 .nav-links ul li a {
-    color: #FFB6C1;
+    color: black;
     text-decoration: none;
     font-size: 26px;
 }
@@ -58,6 +78,25 @@ nav {
 
 .nav-links ul li:hover::after {
     width: 100%;
+}
+
+.homeScreen {
+    min-height: 110vh;
+    width: 100%;
+    background-image: url("/resources/DBG_Cover_Photo_Newer.png");
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.titleDiv {
+    text-align: center;
+    background-color: rgba(255, 182, 193, 0.8);
+}
+
+.titleDiv h1 {
+    font-size: 42px;
 }
 
 .slideShow {
@@ -186,6 +225,11 @@ p {
     box-sizing: border-box;
     margin: auto;
     text-align: center;
+}
+
+.bioColumn p {
+    color: black;
+    text-align: left;
 }
 
 @media(max-width: 700px) {
@@ -321,4 +365,27 @@ hr.solid {
     margin: 5%;
     display: flex;
     justify-content: space-between;
+}
+
+.headerShortNew {
+    width: 100%;
+    background-color: #FFE7E9;
+    background-position: center;
+    position: relative;
+}
+
+.leftSide {
+    width: 50%;
+    background-color: red;
+}
+
+.rightSide {
+    width: 50%;
+    background-color: blue;
+}
+
+.googleMap {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }

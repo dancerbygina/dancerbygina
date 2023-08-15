@@ -20,11 +20,15 @@
     </head>
     <body>
         <section class="header">
-            <nav>
-                <div class="logoBox">
-                    <h1>Dancer By Gina</h1>
-                </div>
+            <div class="titleDiv">
+                <h1>The Dancer By Gina</h1>
+            </div>
 
+            <div class="homeScreen">
+                
+            </div>
+
+            <nav>
                 <div class="nav-links" id="navLinks">
                     <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
                     <ul>
@@ -38,30 +42,17 @@
                 </div>
                 <i class="fa-solid fa-bars" onclick="showMenu()"></i>
             </nav>
-
-            <div class="slideShow">
-                <div class="slideShowColumn">
-                    <i class="fa-solid fa-arrow-left" onClick="slideShowLeft()"></i>
-                </div>
-                <div class="slideShowImage">
-                    <img src="resources/dbg cover photo.png" class="slideImages">
-                    <img src="resources/BestInRegion.png" class="slideImages">
-                </div>
-                <div class="slideShowColumn">
-                    <i class="fa-solid fa-arrow-right" onClick="slideShowRight()"></i>
-                </div>
-            </div>
         </section>
 
         <!-- News Flash and Socials -->
         <section class="newsFlash">
-            <h1>"Inspiring Young Minds to be the best they can be!"</h1>
+            <h1>"Inspiring young minds to be the best they can be!"</h1>
             <div class = "row">
                 <div class = "column">
                     <h1>News Flash</h1>
                     <p>Dance, tumbling, and cheer for all ages! Mommy and Me starts at 16 months!</p>
-                    <p class="boldText">May 20, 2023 Dance Concert at VMCCC in Lima Ohio!</p>
-                    <p>Classes start Sept 12 week! All times and rosters are posted on the front doors of the studio! Follow our Facebook page for current info!</p>
+                    <p class="boldText"></p>
+                    <p><strong>Classes start Sept 11 week!</strong> All times and rosters are posted on the front doors of the studio! Follow our Facebook page for current info!</p>
                 </div>
                 <div class="column">
                     <h1>Thank you!</h1>
@@ -106,8 +97,6 @@
         <!-- JavaScript -->
         <script>
             var navLinks = document.getElementById("navLinks");
-            let SlideIndex = 0;
-            showSlideShow(SlideIndex);
 
             function showMenu() {
                 navLinks.style.right = "0";
@@ -116,37 +105,6 @@
             function hideMenu() {
                 navLinks.style.right = "-200px";
             }
-
-            
-
-            function slideShowLeft() {
-                showSlideShow(SlideIndex += 1);
-            }
-
-            function slideShowRight() {
-                showSlideShow(SlideIndex -= 1);
-            }
-
-            function showSlideShow(n) {
-                let i;
-                let homeImage = document.getElementsByClassName("slideImages");
-                
-                if(n > homeImage.length - 1) {
-                    SlideIndex = 0;
-                }
-
-                if(n < 0) {
-                    SlideIndex = homeImage.length - 1;
-                }
-
-                for(i = 0; i < homeImage.length; i++) {
-                    homeImage[i].style.display = "none";
-                }
-
-                homeImage[SlideIndex].style.display = "block";
-            }
-
-            
         </script>
     </body>
 </html>
