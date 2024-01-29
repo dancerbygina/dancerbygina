@@ -24,8 +24,19 @@
                 <h1>The Dancer By Gina</h1>
             </div>
 
+            <!--Slide One-->
             <div class="homeScreen">
-                
+                <img class="slideImage" src="/resources/DBG_Cover_Photo_Newer.png">
+            </div>
+
+            <!--Slide Two-->
+            <div class="homeScreen">
+                <img class="slideImage" src="/resources/Cover_Photo_Two.PNG">
+            </div>
+
+            <!--Slide Three-->
+            <div class="homeScreen">
+                <img class="slideImage" src="/resources/Cover_Photo_Three.jpg">
             </div>
 
             <nav>
@@ -42,6 +53,8 @@
                 </div>
                 <i class="fa-solid fa-bars" onclick="showMenu()"></i>
             </nav>
+
+            
         </section>
 
         <!-- News Flash and Socials -->
@@ -50,9 +63,10 @@
             <div class = "row">
                 <div class = "column">
                     <h1>News Flash!</h1>
-                    <p>Dance, tumbling, and cheer for all ages! Mommy and Me starts at 16 months!</p>
-                    <p class="boldText"></p>
-                    <p><strong>Classes start Sept 11 week!</strong> All times and rosters are posted on the front doors of the studio! Follow our Facebook page for current info!</p>
+                    <p><strong>2024 Dance Concert! May 18, 2024</strong></p>
+                    <p>1pm and 7pm</p>
+                    <p><strong>See us at the Cleveland CavaliersPrimetime and Halftime shows!</strong></p>
+                    <p>April 12, 2024!</p>
                 </div>
                 <div class="column">
                     <h1>Thank you!</h1>
@@ -97,6 +111,44 @@
         <!-- JavaScript -->
         <script>
             var navLinks = document.getElementById("navLinks");
+
+            var slideIndex = 0;
+            moveSlideShow();
+
+            function moveSlideShow()
+            {
+                var i;
+                var x = document.getElementsByClassName("homeScreen");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+
+                slideIndex++;
+                if (slideIndex > x.length) {slideIndex = 1}
+
+                x[slideIndex-1].style.display = "block";
+                x[slideIndex-1].style.opacity = 1;
+
+                setTimeout(function () {
+                    fadeOut(x[slideIndex-1]);
+                }, 6000)
+                
+                setTimeout(moveSlideShow, 6500); // Change image every 4 seconds
+            }
+
+            function fadeOut(element)
+            {
+                var opacity = 1;
+                var intervalID = setInterval(function () {
+                    if (opacity > 0) {
+                        opacity -= 0.1; // Adjust the increment to control the fade-out speed
+                        element.style.opacity = opacity;
+                    } else {
+                        clearInterval(intervalID);
+                        element.style.display = "none"; // Hide the element after fading out
+                    }
+                }, 50);
+            }
 
             function showMenu() {
                 navLinks.style.right = "0";

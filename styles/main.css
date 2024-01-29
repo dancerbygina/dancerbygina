@@ -83,11 +83,16 @@ nav {
 .homeScreen {
     min-height: 110vh;
     width: 100%;
-    background-image: url("/resources/DBG_Cover_Photo_Newer.png");
     justify-content: center;
     background-position: center;
     background-size: cover;
     position: relative;
+}
+
+.slideImage {
+    width: 100%;
+    min-height: 110vh;
+    max-height: 110vh;
 }
 
 .titleDiv {
@@ -299,6 +304,10 @@ p {
     text-decoration: none;
 }
 
+.column p {
+    font-size: 125%;
+}
+
 .facebook p {
     font-size: 24px;
 }
@@ -388,4 +397,11 @@ hr.solid {
     position: absolute;
     right: 0px;
     bottom: 0px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
