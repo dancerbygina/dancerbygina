@@ -12,6 +12,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/4ddc70ccf9.js" crossorigin="anonymous"></script>
         <link rel="icon" type="image/x-icon" href="resources/DBG_Logo.jpg">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
         <!--Linking the CSS Stylesheet-->
         <link rel="stylesheet" href="styles/main.css">
@@ -19,10 +22,27 @@
 
     </head>
     <body>
-        <section class="header">
-            <div class="titleDiv">
-                <h1>The Dancer By Gina</h1>
+        <nav>
+            <div class="nav-title">
+                <h2>The Dancer By Gina</h2>
             </div>
+            
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="info.html">Info</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                    <li><a href="calender.html">Calender</a></li>
+                    <li><a href="competition.html">Competition Team</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <section class="header">
+            
 
             <!--Slide One-->
             <div class="homeScreen">
@@ -38,22 +58,6 @@
             <div class="homeScreen">
                 <img class="slideImage" src="resources/DBG_Cover_PhoneNumber.jpg">
             </div>
-
-            <nav>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="info.html">Info</a></li>
-                        <li><a href="faculty.html">Faculty</a></li>
-                        <li><a href="forms.html">Forms</a></li>
-                        <li><a href="calender.html">Calender</a></li>
-                        <li><a href="competition.html">Competition Team</a></li>
-                    </ul>
-                </div>
-                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-            </nav>
-
             
         </section>
 
