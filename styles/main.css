@@ -209,7 +209,7 @@ h1 {
     font-size: 36px;
     font-weight: 600;
 }
-
+column
 p {
     color: #777;
     font-size: 14px;
@@ -225,11 +225,11 @@ p {
 }
 
 .column {
-    flex-basis: 31%;
+    flex-basis: 48%;
     background: #FFB6C1;
     border-radius: 10px;
     margin-bottom: 5%;
-    padding: 20px 12px;
+    padding: 5px 12px;
     box-sizing: border-box;
 }
 
