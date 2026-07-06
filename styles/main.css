@@ -330,12 +330,9 @@ p {
 }
 
 @media (max-width:700px) {
-
     .bioColumn {
-        width: 90%;
-        margin: 0 auto;
+        flex-basis: 31%;
     }
-
 }
 
 .bioColumn p {
@@ -376,10 +373,10 @@ p {
 
 .location-Column {
     flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(255, 182, 193, 0.8);
     margin-bottom: 5%;
 }
@@ -393,10 +390,6 @@ p {
     .location-Column p{
         font-size:18px;
     }    
-}
-
-.addressOne {
-    padding-top: 35%;
 }
 
 .slideImages {
