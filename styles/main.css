@@ -212,7 +212,7 @@ nav .fa-solid {
         top: 0;
         right: -200px;
         text-align: left;
-        z-index: 2;
+        z-index: 9999;
         transition: 1s;
 
         flex: 1;
@@ -505,6 +505,12 @@ hr.solid {
     margin: 5%;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+}
+
+.galleryRow img {
+    max-width: 100%;
+    height: auto;
 }
 
 .headerShortNew {
