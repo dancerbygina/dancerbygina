@@ -73,6 +73,14 @@ nav {
     font-size: 26px;
 }
 
+@media(max-width:700px){
+
+    .nav-links ul li a{
+        font-size:20px;
+    }
+    
+    }
+
 .nav-links ul li::after {
     content: '';
     width: 0%;
@@ -96,6 +104,14 @@ nav {
     background-size: cover;
     position: relative;
 }
+
+@media(max-width:700px){
+
+    .homeScreen{
+        max-height:35vh;
+    }
+    
+    }
 
 .slideImage {
     width: 100%;
@@ -173,7 +189,7 @@ nav .fa-solid {
     }
 
     .nav-links {
-        position: absolute;
+        position: fixed;
         background: #E75480;
         height: 100vh;
         width: 200px;
@@ -196,10 +212,11 @@ nav .fa-solid {
         cursor: pointer;
     }
 
-    .nav-links ul {
-        display: flex;
-        align-items: center;
-        gap: 20px;
+    .nav-links ul{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
     }
 }
 
@@ -225,7 +242,7 @@ nav .fa-solid {
     }
 
 h1 {
-    font-size: 36px;
+    font-size:clamp(24px, 5vw, 36px);
     font-weight: 600;
 }
 
@@ -276,6 +293,25 @@ p {
     text-align: center;
 }
 
+.facultyPhoto {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width:700px)
+{
+    .photoColumn {
+        max-width: 90%;
+    }
+
+    .facultyPhoto {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 .bioColumn {
     flex-basis: 40%;
     background: #FFB6C1;
@@ -308,6 +344,14 @@ p {
     background-size: cover;
 }
 
+@media(max-width: 700px) {
+    .location iframe{
+        width:100%;
+        border:0;
+    }
+}
+
+
 .infoSection {
     width: 80%;
     margin: auto;
@@ -328,6 +372,12 @@ p {
 .location-Column p {
     color: black;
     font-size: 24px;
+}
+
+@media(max-width:700px){
+    .location-Column p{
+        font-size:18px;
+    }    
 }
 
 .addressOne {
@@ -462,8 +512,8 @@ hr.solid {
 }
 
 .column iframe{
-    width: "100%";
-    height: "500";
+    width: 100%;
+    height: 500;
 }
 
 @media(max-width: 700px) {
